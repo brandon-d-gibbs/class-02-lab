@@ -1,0 +1,27 @@
+em {
+    color: red;
+}
+
+mark {
+    background-color: blueviolet;
+    color: yellow;
+}
+
+strong {
+
+}
+
+u {
+    font-size: 1.2em ;
+}
+
+q {
+    color: white;
+    background-image: url("https://cf.ltkcdn.net/feng-shui/images/std/238894-425x200-chinese-dragon-1.jpg");
+    background-size: contain;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
