@@ -9,7 +9,9 @@ mark {
 }
 
 strong {
-
+    border-style: dotted;
+    border-color: red;
+    border-radius: 5px;
 }
 
 u {
@@ -25,5 +27,5 @@ q {
 
 p {
     font-family: Arial, Helvetica, sans-serif;
-    
+
 }

@@ -42,7 +42,7 @@ if(japanTime.toLowerCase() === 'y'){
 if(previousWork.toLowerCase() === 'y'){
   alert('You were right! Morgan has worked in softare for nearly 8 years.');
 }else{
-  alert('You were incorrect about Morgan\'s work history. He has spent several '+
+  alert('You were incorrect about Morgan\'s work history. He has spent several ' +
   'years as a software tester, amongst other roles.');
 }
 
