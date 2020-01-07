@@ -5,6 +5,7 @@ em {
 mark {
     background-color: blueviolet;
     color: yellow;
+    font-family: "Courier New", Courier, monospace;
 }
 
 strong {
@@ -19,6 +20,7 @@ q {
     color: white;
     background-image: url("https://cf.ltkcdn.net/feng-shui/images/std/238894-425x200-chinese-dragon-1.jpg");
     background-size: contain;
+    font-family: cursive;
 }
 
 p {

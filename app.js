@@ -15,40 +15,41 @@ alert('Hi ' + user + '! Welcome to the Morgan Quiz! I\'ve gota  few questions fo
 
 
 // 5 yes/no questions <done>
-var dogName = prompt('Morgan\'s dog was named Ramen: Y/N?');
+var dogName = prompt('Morgan\'s had a dog named \'Ramen\': Y/N?');
 var schoolCount = prompt('Morgan only attended 4 schools in Bellingham: Y/N');
 var japanTime = prompt('Morgan lived in Japan: Y/N');
 var previousWork = prompt('Morgan has worked in software before: Y/N');
 var tabletop = prompt('Morgan hates all things related to dragons and the dungeons they inhabit: Y/N');
 
 if(dogName.toLowerCase() === 'n'){
-  console.log('Correct! It was \'Noodles\'');
+  alert('Your animal guess was correct! Morgan\'s dog was named \'Noodles\'');
 }else{
-  console.log('oooo, that is not correct.');
+  alert('Morgan did not have a pet named \'Ramen\'');
 }
 
 if(schoolCount.toUpperCase() === 'N'){
-  console.log('Correct! Morgan attended a silly amount of schools.');
+  alert('You were correct about schools! Morgan attended a silly amount of schools.');
 }else{
-  console.log('That is incorrect.');
+  alert('Sadly, Morgan attended more than just 4 schools.');
 }
 
 if(japanTime.toLowerCase() === 'y'){
-  console.log('それは正しいです - That is correct!');
+  alert('それは正しいです - That is correct! Morgan did live in Japan!');
 }else{
-  console.log('違う - NOPE! He spent nearly 2 years there.');
+  alert('違う - Chigau! Morgan spent nearly 2 years in beautiful Fukuyama.');
 }
 
 if(previousWork.toLowerCase() === 'y'){
-  console.log('True! He has worked in softare for nearly 8 years');
+  alert('You were right! Morgan has worked in softare for nearly 8 years.');
 }else{
-  console.log('That is incorrect. He has spent several years as a software tester.');
+  alert('You were incorrect about Morgan\'s work history. He has spent several '+
+  'years as a software tester, amongst other roles.');
 }
 
 if(tabletop.toLowerCase() === 'n'){
-  console.log('Correct! Morgan obsessses about D&D to an unhealthy degree!');
+  alert('You nailed your spot check! Morgan obsessses about D&D to an unhealthy degree!');
 }else{
-  console.log('That is tremendous insult and Morgan will fight you over it!');
+  alert('CRY HAVOC! Morgan is insulted about your perception of his hobbies and will fight you over it!');
 }
 
 
