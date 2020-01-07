@@ -21,32 +21,32 @@ var japanTime = prompt('Morgan lived in Japan: Y/N');
 var previousWork = prompt('Morgan has worked in software before: Y/N');
 var tabletop = prompt('Morgan hates all things related to dragons and the dungeons they inhabit: Y/N');
 
-if(dogName.toLowerCase() === 'n'){
+if(dogName.toLowerCase() === 'n' || dogName.toLowerCase() === 'no'){
   alert('Your animal guess was correct! Morgan\'s dog was named \'Noodles\'');
 }else{
   alert('Morgan did not have a pet named \'Ramen\'');
 }
 
-if(schoolCount.toUpperCase() === 'N'){
+if(schoolCount.toUpperCase() === 'N' || schoolCount.toUpperCase() === 'no'){
   alert('You were correct about schools! Morgan attended a silly amount of schools.');
 }else{
-  alert('Sadly, Morgan attended more than just 4 schools.');
+  alert('Morgan attended more than twice as many schools as that.');
 }
 
-if(japanTime.toLowerCase() === 'y'){
-  alert('それは正しいです - That is correct! Morgan did live in Japan!');
-}else{
+if(japanTime.toLowerCase() === 'n' || japanTime.toLowerCase() === 'no'){
   alert('違う - Chigau! Morgan spent nearly 2 years in beautiful Fukuyama.');
+}else{
+  alert('それは正しいです - That is correct! Morgan did live in Japan!');
 }
 
-if(previousWork.toLowerCase() === 'y'){
-  alert('You were right! Morgan has worked in softare for nearly 8 years.');
-}else{
+if(previousWork.toLowerCase() === 'n' || previousWork.toLowerCase() === 'no'){
   alert('You were incorrect about Morgan\'s work history. He has spent several ' +
   'years as a software tester, amongst other roles.');
+}else{
+  alert('You were right! Morgan has worked in softare for nearly 8 years.');
 }
 
-if(tabletop.toLowerCase() === 'n'){
+if(tabletop.toLowerCase() === 'n' || tabletop.toLowerCase() === 'no'){
   alert('You nailed your spot check! Morgan obsessses about D&D to an unhealthy degree!');
 }else{
   alert('CRY HAVOC! Morgan is insulted about your perception of his hobbies and will fight you over it!');
