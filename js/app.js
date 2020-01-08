@@ -73,23 +73,54 @@ var numMin = 1;
 var numMax = 100;
 var targetNumber = Math.random(numMin, numMax);
 var numberGuess = '';
-var guessAttempts = 4;
+var guessNumberAttempts = 4;
 
-for (let x = 0; x < guessAttempts; x++){
+for (let x = 0; x < guessNumberAttempts; x++){
   numberGuess = prompt('I\' thinking of a number between ' + numMin + ' and ' + numMax +'. What is your guess?');
   //this needs to check for only equal as the input may be caught as string
   // eslint-disable-next-line eqeqeq
   if(numberGuess == targetNumber){
     alert('Correct! Great Job! That only took you ' + (x + 1) + 'trie(s)!');
+    answerCount++;
     break;
   }else if( numberGuess < targetNumber){
-    alert('My number is HIGHER than that. ' + (guessAttempts - x) + ' attempts remain.');
+    alert('My number is HIGHER than that. ' + (guessNumberAttempts - x) + ' attempts remain.');
   }else if( numberGuess > targetNumber){
-    alert('My number is LOWER than that ' + (guessAttempts - x) + ' attempts remain.');
-  }else if(x === (guessAttempts - 1)){
-    alert('You have failed to guess my number');
+    alert('My number is LOWER than that ' + (guessNumberAttempts - x) + ' attempts remain.');
+  }else if(x >= (guessNumberAttempts - 1)){
+    alert('You have failed to guess my number, which was ' + targetNumber);
   }
 }
+
+var answerArray = ['Los Angeles', 'Fukuyama', 'Bellinghma', 'Seattle', 'Pullman'];
+var guessAnswerAttempts = 6;
+var possibleAnswer = '';
+
+for (let x = 0; x < guessAnswerAttempts; x++) {
+  possibleAnswer = prompt('Name a place Morgan has lived before.');
+
+  if (answerArray.contains(possibleAnswer.toLowerCase())) {
+    alert('Congrats! You guess correctly!');
+    answerCount++;
+    break;
+  }else{
+    alert('Morgan has not lived in ' + possibleAnswer + '. You have ' + (guessAnswerAttempts - x) + ' attempts remaining.');
+  }// end if
+
+  if(x >= guessAnswerAttempts){
+    
+    var locationString = '';
+    for (let y = 0; y < answerArray.length; y++){
+      locationString += answerArray[y]
+      if(y < answerArray.length){
+        locationString += ', ';
+      }// end if
+    }// end for
+    alert('You did not guess where Morgan has lived before. Here is a list of possible answers: ' + locationString);
+  }// end if
+
+
+} //end for
 
 // display back in final message
 alert('You got ' + answerCount + ' questions correct out of 5. See Morgan\'s bio for answers and more!');
