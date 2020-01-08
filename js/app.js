@@ -22,7 +22,9 @@ var previousWork = prompt('Morgan has worked in software before: Y/N');
 var tabletop = prompt('Morgan hates all things related to dragons and the dungeons they inhabit: Y/N');
 
 var answerCount = 0;
+var questionCount = 0;
 
+questionCount++; //question 1
 if(dogName.toLowerCase() === 'n' || dogName.toLowerCase() === 'no'){
   alert('Your animal guess was correct! Morgan\'s dog was named \'Noodles\'');
   answerCount++;
@@ -32,6 +34,7 @@ if(dogName.toLowerCase() === 'n' || dogName.toLowerCase() === 'no'){
   alert('I\'m only capable of understanding Yes/No for an answer about Morgan\'s dog.');
 }
 
+questionCount++; //question 2
 if(schoolCount.toUpperCase() === 'N' || schoolCount.toUpperCase() === 'no'){
   alert('You were correct about schools! Morgan attended a silly amount of schools.');
   answerCount++;
@@ -41,6 +44,7 @@ if(schoolCount.toUpperCase() === 'N' || schoolCount.toUpperCase() === 'no'){
   alert('I\'m only capable of understanding Yes/No for an answer about Morgan\'s school history.');
 }
 
+questionCount++; //question 3
 if(japanTime.toLowerCase() === 'n' || japanTime.toLowerCase() === 'no'){
   alert('違う - Chigau! Morgan spent nearly 2 years in beautiful Fukuyama.');
 }else if (japanTime.toLowerCase() === 'y' || japanTime.toLowerCase() === 'yes'){
@@ -50,6 +54,7 @@ if(japanTime.toLowerCase() === 'n' || japanTime.toLowerCase() === 'no'){
   alert('I\'m only capable of understanding Yes/No for an answer about Japan.');
 }
 
+questionCount++; //question 4
 if(previousWork.toLowerCase() === 'n' || previousWork.toLowerCase() === 'no'){
   alert('You were incorrect about Morgan\'s work history. He has spent several ' +
   'years as a software tester, amongst other roles.');
@@ -60,6 +65,7 @@ if(previousWork.toLowerCase() === 'n' || previousWork.toLowerCase() === 'no'){
   alert('I\'m only capable of understanding Yes/No for an answer about Morgan\'s work history.');
 }
 
+questionCount++; //question 5
 if(tabletop.toLowerCase() === 'n' || tabletop.toLowerCase() === 'no'){
   alert('You nailed your spot check! Morgan obsessses about D&D to an unhealthy degree!');
   answerCount++;
@@ -69,12 +75,15 @@ if(tabletop.toLowerCase() === 'n' || tabletop.toLowerCase() === 'no'){
   alert('I\'m only capable of understanding Yes/No for an answer regarding Morgan\'s obsession.');
 }
 
+
+//generates a random number to guess
 var numMin = 1;
 var numMax = 100;
-var targetNumber = Math.random(numMin, numMax);
+var targetNumber = Math.floor(Math.random() * (numMax - numMin + 1) + numMin);
 var numberGuess = '';
 var guessNumberAttempts = 4;
 
+questionCount++; //question 6
 for (let x = 0; x < guessNumberAttempts; x++){
   numberGuess = prompt('I\' thinking of a number between ' + numMin + ' and ' + numMax +'. What is your guess?');
   //this needs to check for only equal as the input may be caught as string
@@ -84,35 +93,45 @@ for (let x = 0; x < guessNumberAttempts; x++){
     answerCount++;
     break;
   }else if( numberGuess < targetNumber){
-    alert('My number is HIGHER than that. ' + (guessNumberAttempts - x) + ' attempts remain.');
+    alert('My number is HIGHER than that. ' + (guessNumberAttempts - x - 1) + ' attempts remain.');
   }else if( numberGuess > targetNumber){
-    alert('My number is LOWER than that ' + (guessNumberAttempts - x) + ' attempts remain.');
-  }else if(x >= (guessNumberAttempts - 1)){
+    alert('My number is LOWER than that ' + (guessNumberAttempts - x - 1) + ' attempts remain.');
+  }
+
+  if(x >= (guessNumberAttempts - 1)){
     alert('You have failed to guess my number, which was ' + targetNumber);
   }
 }
 
-var answerArray = ['Los Angeles', 'Fukuyama', 'Bellinghma', 'Seattle', 'Pullman'];
+
+questionCount++; //question7
+//makes a normalized answer array based on answer array
+var answerArray = ['Los Angeles', 'Fukuyama', 'Bellingham', 'Seattle', 'Pullman'];
+var normalizedAnswerArray = [];
+for(var q = 0; q < answerArray.length; q++){
+  normalizedAnswerArray.push(answerArray[q].toLowerCase());
+}
 var guessAnswerAttempts = 6;
 var possibleAnswer = '';
 
-for (let x = 0; x < guessAnswerAttempts; x++) {
+for (var x = 0; x < guessAnswerAttempts; x++) {
   possibleAnswer = prompt('Name a place Morgan has lived before.');
 
-  if (answerArray.contains(possibleAnswer.toLowerCase())) {
-    alert('Congrats! You guess correctly!');
+  if (normalizedAnswerArray.includes(possibleAnswer.toLowerCase())) {
+    alert('Congrats! You guessed correctly!');
     answerCount++;
+    console.log('hmm');
     break;
   }else{
-    alert('Morgan has not lived in ' + possibleAnswer + '. You have ' + (guessAnswerAttempts - x) + ' attempts remaining.');
+    alert('Morgan has not lived in ' + possibleAnswer + '. You have ' + (guessAnswerAttempts - x - 1) + ' attempts remaining.');
   }// end if
 
-  if(x >= guessAnswerAttempts){
-    
-    var locationString = '';
+  var locationString = '';
+
+  if( x >= guessAnswerAttempts - 1){
     for (let y = 0; y < answerArray.length; y++){
-      locationString += answerArray[y]
-      if(y < answerArray.length){
+      locationString += answerArray[y];
+      if(y < answerArray.length - 1){
         locationString += ', ';
       }// end if
     }// end for
@@ -123,4 +142,4 @@ for (let x = 0; x < guessAnswerAttempts; x++) {
 } //end for
 
 // display back in final message
-alert('You got ' + answerCount + ' questions correct out of 5. See Morgan\'s bio for answers and more!');
+alert('You got ' + answerCount + ' questions correct out of ' + questionCount + '. See Morgan\'s bio for answers and more!');
