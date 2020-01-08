@@ -26,37 +26,47 @@ var answerCount = 0;
 if(dogName.toLowerCase() === 'n' || dogName.toLowerCase() === 'no'){
   alert('Your animal guess was correct! Morgan\'s dog was named \'Noodles\'');
   answerCount++;
-}else{
+}else if (dogName.toLowerCase() === 'y' || dogName.toLowerCase() === 'yes'){
   alert('Morgan did not have a pet named \'Ramen\'');
+}else{
+  alert('I\'m only capable of understanding Yes/No for an answer about Morgan\'s dog.');
 }
 
 if(schoolCount.toUpperCase() === 'N' || schoolCount.toUpperCase() === 'no'){
   alert('You were correct about schools! Morgan attended a silly amount of schools.');
   answerCount++;
-}else{
+}else if (schoolCount.toUpperCase() === 'Y' || schoolCount.toUpperCase() === 'YES'){
   alert('Morgan attended more than twice as many schools as that.');
+}else{
+  alert('I\'m only capable of understanding Yes/No for an answer about Morgan\'s school history.');
 }
 
 if(japanTime.toLowerCase() === 'n' || japanTime.toLowerCase() === 'no'){
   alert('違う - Chigau! Morgan spent nearly 2 years in beautiful Fukuyama.');
-}else{
+}else if (japanTime.toLowerCase() === 'y' || japanTime.toLowerCase() === 'yes'){
   alert('それは正しいです - That is correct! Morgan did live in Japan!');
   answerCount++;
+}else{
+  alert('I\'m only capable of understanding Yes/No for an answer about Japan.');
 }
 
 if(previousWork.toLowerCase() === 'n' || previousWork.toLowerCase() === 'no'){
   alert('You were incorrect about Morgan\'s work history. He has spent several ' +
   'years as a software tester, amongst other roles.');
-}else{
+}else if (previousWork.toLowerCase() === 'y' || previousWork.toLowerCase() === 'yes'){
   alert('You were right! Morgan has worked in softare for nearly 8 years.');
   answerCount++;
+}else{
+  alert('I\'m only capable of understanding Yes/No for an answer about Morgan\'s work history.');
 }
 
 if(tabletop.toLowerCase() === 'n' || tabletop.toLowerCase() === 'no'){
   alert('You nailed your spot check! Morgan obsessses about D&D to an unhealthy degree!');
   answerCount++;
-}else{
+}else if (tabletop.toLowerCase() === 'y' || tabletop.toLowerCase() === 'yes'){
   alert('CRY HAVOC! Morgan is insulted about your perception of his hobbies and will fight you over it!');
+}else{
+  alert('I\'m only capable of understanding Yes/No for an answer regarding Morgan\'s obsession.');
 }
 
 
