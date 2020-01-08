@@ -69,6 +69,27 @@ if(tabletop.toLowerCase() === 'n' || tabletop.toLowerCase() === 'no'){
   alert('I\'m only capable of understanding Yes/No for an answer regarding Morgan\'s obsession.');
 }
 
+var numMin = 1;
+var numMax = 100;
+var targetNumber = Math.random(numMin, numMax);
+var numberGuess = '';
+var guessAttempts = 4;
+
+for (let x = 0; x < guessAttempts; x++){
+  numberGuess = prompt('I\' thinking of a number between ' + numMin + ' and ' + numMax +'. What is your guess?');
+  //this needs to check for only equal as the input may be caught as string
+  // eslint-disable-next-line eqeqeq
+  if(numberGuess == targetNumber){
+    alert('Correct! Great Job! That only took you ' + (x + 1) + 'trie(s)!');
+    break;
+  }else if( numberGuess < targetNumber){
+    alert('My number is HIGHER than that. ' + (guessAttempts - x) + ' attempts remain.');
+  }else if( numberGuess > targetNumber){
+    alert('My number is LOWER than that ' + (guessAttempts - x) + ' attempts remain.');
+  }else if(x === (guessAttempts - 1)){
+    alert('You have failed to guess my number');
+  }
+}
 
 // display back in final message
 alert('You got ' + answerCount + ' questions correct out of 5. See Morgan\'s bio for answers and more!');
