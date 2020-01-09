@@ -105,3 +105,5 @@ for (var x = 0; x < guessAnswerAttempts; x++) {
 
 // display back in final message
 alert('You got ' + answerCount + ' questions correct out of ' + (answerArray.length + 2) + '. See Morgan\'s bio for answers and more!');
+
+//Gibbs was here
