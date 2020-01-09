@@ -15,10 +15,10 @@ alert('Hi ' + user + '! Welcome to the Morgan Quiz! I\'ve gota  few questions fo
 
 
 var questionArray = ['Morgan\'s had a dog named \'Ramen\': Y/N?',
-'Morgan only attended 4 schools in Bellingham: Y/N',
-'Morgan lived in Japan: Y/N',
-'Morgan has worked in software before: Y/N',
-'Morgan hates all things related to dragons and the dungeons they inhabit: Y/N'];
+  'Morgan only attended 4 schools in Bellingham: Y/N',
+  'Morgan lived in Japan: Y/N',
+  'Morgan has worked in software before: Y/N',
+  'Morgan hates all things related to dragons and the dungeons they inhabit: Y/N'];
 
 var simpleAnswerArray = ['n', 'n', 'y', 'y', 'n'];
 
@@ -110,7 +110,7 @@ var guessNumberAttempts = 4;
 
 //questionCount++; //question 6
 for (let x = 0; x < guessNumberAttempts; x++){
-  numberGuess = prompt('I\' thinking of a number between ' + numMin + ' and ' + numMax +'. What is your guess?');
+  numberGuess = prompt('I\' thinking of a number between ' + numMin + ' and ' + numMax + '. What is your guess?');
   //this needs to check for only equal as the input may be caught as string
   // eslint-disable-next-line eqeqeq
   if(numberGuess == targetNumber){

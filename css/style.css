@@ -38,6 +38,10 @@ q {
 
 p {
     font-family: Arial, Helvetica, sans-serif;
+    border-style: solid;
+    border-color: blue;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 img {
@@ -54,4 +58,18 @@ body {
 
 main {
     padding-top: 100px;
+}
+
+ol, ul {
+    align-items: center;
+    display: inline-table;
+    align-content: stretch;    
+}
+
+ol li {
+    font-style: italic;
+}
+
+article {
+    text-align: center;
 }
