@@ -68,8 +68,24 @@ ol, ul {
 
 ol li {
     font-style: italic;
+    text-align: left;
 }
 
+ul li {
+    text-align: left;
+}
 article {
     text-align: center;
+}
+
+#games {
+    background: rgba(255, 0, 0, .2);
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+#experience {
+    background: rgba(43, 27, 182, 0.2);
+    padding-right: 5%;
+    padding-left: 5%;
 }
